@@ -10,7 +10,14 @@ first <- c(1, 1, 1, 1, 0, 0, 0, 0, NA, 1)  # Convert "bad" to 0 and "good" to 1
 second <- c(0, 0, 1, 1, 0, 0, 1, 1, 1, 1)  # Convert "low" to 0 and "high" to 1
 finaldecision <- c(0, 1, 0, 1, 0, 1, 0, 1, 1, 1)
 
-#histograms
+#histograms of the variables 
+hist(freq)
+hist(bloodp)
+hist(first)
+hist(second)
+hist(finaldecision)
+
+#histogram of distribution of blood pressure
 ggplot(df, aes(x = bloodp, y = freq , fill = variable)) +
   geom_bar(stat = "identity", position = 'stack', fill = "red", color = "black", alpha = 1) +
   labs(title = "Distribution of Blood Pressure", x = "Blood Pressure", y = "Frequency")
